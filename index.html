@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookbook Recipes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Cookbook</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <input type="text" id="searchBar" placeholder="Search recipes..." onkeyup="searchRecipe()">
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="content">
+      <h1>🍴Yum Yum Recipes</h1>
+      <p>Delicious recipes made simple and easy to cook at home</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p style="max-width:600px;margin:auto;text-align:center;">
+       A cookbook is a special book that brings the art of cooking to life. It holds a collection of recipes, tips, and secrets that turn ordinary meals into something extraordinary. More than just instructions, it inspires creativity, connects us to different cultures, and makes the kitchen a place of learning and joy.
+  </section>
+
+    <!-- Recipes Section -->
+  <section id="recipes">
+    <h2>Recipes</h2>
+    <div class="recipes">
+
+      <!-- Chicken Fried Rice -->
+      <div class="card">
+        <img src="images/chicken rice.jpg" alt="Chicken Fried Rice">
+        <h3>Chicken Fried Rice</h3>
+        <p>Quick & tasty Indo-Chinese style fried rice with chicken and veggies.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe1', this)">View Recipe</button>
+        <div class="details" id="recipe1">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 cups cooked rice</li>
+            <li>1 cup chicken (boiled & shredded)</li>
+            <li>1 cup mixed vegetables</li>
+            <li>2 tbsp soy sauce</li>
+            <li>1 tbsp oil</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Heat oil in a pan, sauté vegetables.</li>
+            <li>Add chicken and soy sauce, stir well.</li>
+            <li>Add rice and mix properly.</li>
+            <li>Cook for 2 minutes and serve hot.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          
+        </div>
+      </div>
+
+      <!-- Kerala Parotta -->
+      <div class="card">
+        <img src="images/parotta.jpg" alt="Kerala Parotta">
+        <h3>Kerala Parotta</h3>
+        <p>Flaky, soft, and layered flatbread perfect with curry.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe2', this)">View Recipe</button>
+        <div class="details" id="recipe2">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 cups all-purpose flour</li>
+            <li>1 tsp sugar</li>
+            <li>2 tbsp oil</li>
+            <li>Salt as needed</li>
+            <li>Water to knead</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Knead flour, sugar, salt, oil, and water into a soft dough.</li>
+            <li>Rest the dough for 30 minutes.</li>
+            <li>Roll and fold to make layers, then cook on a hot pan.</li>
+            <li>Serve hot with curry.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pRPNgB0C09M?si=JPgdOSlbWm6gdih7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Tandoori Chicken -->
+      <div class="card">
+        <img src="images/chicken.jpg" alt="Tandoori Chicken">
+        <h3>Tandoori Chicken</h3>
+        <p>Juicy, smoky, and spiced chicken cooked in a traditional style.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe3', this)">View Recipe</button>
+        <div class="details" id="recipe3">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>4 chicken legs</li>
+            <li>2 tbsp yogurt</li>
+            <li>1 tbsp lemon juice</li>
+            <li>2 tsp red chili powder</li>
+            <li>Salt to taste</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Marinate chicken with yogurt, spices, and lemon juice.</li>
+            <li>Rest for at least 1 hour.</li>
+            <li>Grill or bake until cooked and smoky.</li>
+            <li>Serve with salad or naan.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PgNewk2JsLI?si=FaEoinM3cyQko0tn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Prawn Biryani -->
+      <div class="card">
+        <img src="images/prawn.jpg" alt="Prawn Biryani">
+        <h3>Prawn Biryani</h3>
+        <p>Aromatic rice layered with spicy prawns and masala.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe4', this)">View Recipe</button>
+        <div class="details" id="recipe4">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 cups basmati rice</li>
+            <li>250g prawns</li>
+            <li>2 onions & 2 tomatoes</li>
+            <li>2 tbsp biryani masala</li>
+            <li>Oil, ghee, spices</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Marinate prawns with spices.</li>
+            <li>Cook rice separately.</li>
+            <li>Prepare masala with onions, tomatoes & prawns.</li>
+            <li>Layer rice and masala, cook on dum.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/eWfJE7V6MCg?si=bk057idmIdb1FbdJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Chapathi -->
+      <div class="card">
+        <img src="images/chappati.jpg" alt="Chapathi">
+        <h3>Chapathi</h3>
+        <p>Soft Indian flatbread made from whole wheat flour.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe5', this)">View Recipe</button>
+        <div class="details" id="recipe5">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 cups whole wheat flour</li>
+            <li>1 tsp salt</li>
+            <li>Water to knead</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Knead flour, salt, and water into a dough.</li>
+            <li>Rest for 20 mins.</li>
+            <li>Roll into thin discs.</li>
+            <li>Cook on hot tawa until golden spots appear.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/C-WYjMNZW0Q?si=TN0QWH7AOVVjbNrR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Sambar Rice -->
+      <div class="card">
+        <img src="images/sambar rice.jpg" alt="Sambar Rice">
+        <h3>Sambar Rice</h3>
+        <p>South Indian one-pot rice with dal, tamarind, and veggies.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe6', this)">View Recipe</button>
+        <div class="details" id="recipe6">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>1 cup rice & 1/2 cup toor dal</li>
+            <li>Tamarind extract</li>
+            <li>Sambar powder</li>
+            <li>Mixed vegetables</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Cook rice and dal together.</li>
+            <li>Prepare tamarind-veggie-sambar base.</li>
+            <li>Mix with rice and simmer.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/WBekNoQ3zIY?si=osadMl-cOffO7c-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Fish Curry -->
+      <div class="card">
+        <img src="images/fish curry.jpg" alt="Fish Curry">
+        <h3>Fish Curry</h3>
+        <p>Spicy, tangy South Indian fish curry with tamarind.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe7', this)">View Recipe</button>
+        <div class="details" id="recipe7">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>500g fish pieces</li>
+            <li>2 onions, 2 tomatoes</li>
+            <li>Tamarind extract</li>
+            <li>Spices and chili powder</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Sauté onions and tomatoes with spices.</li>
+            <li>Add tamarind water and boil.</li>
+            <li>Add fish and cook until tender.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-kPEvUSZkEM?si=984jchzxMOHpV740" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Bubble Tea -->
+      <div class="card">
+        <img src="images/bubble tea.jpg" alt="Bubble Tea">
+        <h3>Bubble Tea</h3>
+        <p>Sweet milk tea with chewy tapioca pearls.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe8', this)">View Recipe</button>
+        <div class="details" id="recipe8">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>1 cup black tea</li>
+            <li>1/2 cup milk</li>
+            <li>2 tbsp sugar</li>
+            <li>Tapioca pearls</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Boil tapioca pearls until soft.</li>
+            <li>Brew tea, mix with milk and sugar.</li>
+            <li>Add pearls and serve chilled.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gk-fUas5VsE?si=BtIAnmOLnUvEktJN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Falooda -->
+      <div class="card">
+        <img src="images/falooda.jpg" alt="Falooda">
+        <h3>Falooda</h3>
+        <p>A refreshing layered dessert drink with basil seeds and ice cream.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe9', this)">View Recipe</button>
+        <div class="details" id="recipe9">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>Falooda sev</li>
+            <li>Basil seeds</li>
+            <li>Rose syrup</li>
+            <li>Milk and ice cream</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Soak basil seeds.</li>
+            <li>Cook sev and cool.</li>
+            <li>Layer glass with syrup, seeds, sev, milk & ice cream.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/mp3KPq_naSw?si=XPKkRyWElOpPu18Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+     </div>
+      <!-- Chocolate Milkshake -->
+      <div class="card">
+        <img src="images/choco.jpg" alt="Chocolate Milkshake">
+        <h3>Chocolate Milkshake</h3>
+        <p>Rich, creamy shake made with chocolate and milk.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe10', this)">View Recipe</button>
+        <div class="details" id="recipe10">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 cups milk</li>
+            <li>3 tbsp cocoa powder</li>
+            <li>2 tbsp sugar</li>
+            <li>Ice cream (optional)</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Blend milk, cocoa, and sugar until frothy.</li>
+            <li>Add ice cream for extra creaminess.</li>
+            <li>Serve chilled with chocolate syrup.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/t1QyMaI8W3Y?si=H_BqI75Zry_38l85" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Burger -->
+      <div class="card">
+        <img src="images/burger.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>Classic burger with patty, veggies, and sauces.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe11', this)">View Recipe</button>
+        <div class="details" id="recipe11">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 burger buns</li>
+            <li>1 veg/chicken patty</li>
+            <li>Lettuce, tomato, onion</li>
+            <li>Cheese slice</li>
+            <li>Mayonnaise & ketchup</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Grill or fry the patty.</li>
+            <li>Toast burger buns lightly.</li>
+            <li>Layer lettuce, patty, cheese, onion & tomato.</li>
+            <li>Add sauces and close with bun.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/HkfLRQ68Byg?si=gOY4FvtyTlXuBThc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Sandwich -->
+      <div class="card">
+        <img src="images/sandwich.jpg" alt="Sandwich">
+        <h3>Sandwich</h3>
+        <p>Simple and tasty grilled vegetable sandwich.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe12', this)">View Recipe</button>
+        <div class="details" id="recipe12">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>4 bread slices</li>
+            <li>Butter</li>
+            <li>Onion, tomato, cucumber</li>
+            <li>Cheese slice</li>
+            <li>Green chutney</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Apply butter and chutney on bread.</li>
+            <li>Layer veggies and cheese.</li>
+            <li>Cover with another slice and grill.</li>
+            <li>Serve hot with ketchup.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/N_QvR7lQxp8?si=MB0nbHBTb471TCcb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      </div>
+
+      <!-- Cheese Puri -->
+      <div class="card">
+        <img src="images/cheese puri.jpg" alt="Cheese Puri">
+        <h3>Cheese Puri</h3>
+        <p>Delicious puris stuffed with gooey cheese.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe13', this)">View Recipe</button>
+        <div class="details" id="recipe13">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 cups wheat flour</li>
+            <li>1/2 cup grated cheese</li>
+            <li>1 tsp salt</li>
+            <li>Water for kneading</li>
+            <li>Oil for frying</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Knead flour, salt, and water into a dough.</li>
+            <li>Roll small puris and stuff with cheese.</li>
+            <li>Seal edges and roll lightly.</li>
+            <li>Deep fry until golden brown.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/K-60NbeHuH8?si=XFFXxQtx-L1zD64T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Curd Vadai -->
+      <div class="card">
+        <img src="images/curd vadai.jpg"alt="Curd Vadai">
+        <h3>Curd Vadai</h3>
+        <p>Soft urad dal vadas soaked in creamy yogurt.</p>
+        <button class="view-btn" onclick="toggleDetails('recipe14', this)">View Recipe</button>
+        <div class="details" id="recipe14">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>1 cup urad dal (soaked & ground)</li>
+            <li>2 cups thick curd</li>
+            <li>1 tsp green chili & ginger paste</li>
+            <li>Salt & spices</li>
+            <li>Coriander leaves</li>
+          </ul>
+          <h4>Procedure:</h4>
+          <ol>
+            <li>Make vada batter with urad dal.</li>
+            <li>Fry vadas until golden.</li>
+            <li>Soak in warm water, then transfer to beaten curd.</li>
+            <li>Garnish with coriander & serve chilled.</li>
+          </ol>
+          <h4>Watch Video:</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/eGkpjRte_Zg?si=3mDTDbLjghowTxCZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+ <!-- Pista Milk -->
+<div class="card">
+  <img src="images/pista milk.jpg" alt="Pista Milk">
+  <h3>Pista Milk</h3>
+  <p>Creamy and delicious pistachio-flavored milk, perfect as a dessert drink.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe15',this)">View Recipe</button>
+  <div class="details" id="recipe15">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>4 cups milk</li>
+      <li>10-12 pista (pistachios), chopped</li>
+      <li>2-3 tbsp sugar</li>
+      <li>1/4 tsp cardamom powder</li>
+      <li>A few saffron strands (optional)</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Soak pistachios in warm milk for 30 minutes and blend into a smooth paste.</li>
+      <li>Boil milk, add pistachio paste, sugar, cardamom, and saffron.</li>
+      <li>Simmer for 5–7 minutes. Serve warm or chilled.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UwBu2FylTpg?si=eNXIwmJYq5Zxa7Dp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Schezwan Noodles -->
+<div class="card">
+  <img src="images/noodles.jpg" alt="Schezwan Noodles">
+  <h3>Schezwan Noodles</h3>
+  <p>Spicy and flavorful Indo-Chinese noodles tossed in Schezwan sauce.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe16',this)">View Recipe</button>
+  <div class="details" id="recipe16">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 cups boiled noodles</li>
+      <li>2 tbsp Schezwan sauce</li>
+      <li>1 cup mixed vegetables (capsicum, carrot, beans)</li>
+      <li>2 tbsp oil</li>
+      <li>Salt to taste</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Heat oil in a pan, sauté vegetables on high flame.</li>
+      <li>Add Schezwan sauce and mix well.</li>
+      <li>Add boiled noodles and toss properly.</li>
+      <li>Cook for 2 minutes and serve hot.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jJJjW0ldyCM?si=g37IuMvnycIeS7LX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Masala Tea -->
+<div class="card">
+  <img src="images/tea.jpg" alt="Masala Tea">
+  <h3>Masala Tea</h3>
+  <p>Aromatic Indian tea brewed with spices and milk.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe17',this)">View Recipe</button>
+  <div class="details" id="recipe17">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 cups water</li>
+      <li>1 cup milk</li>
+      <li>2 tsp tea leaves</li>
+      <li>1 tsp ginger (crushed)</li>
+      <li>2-3 cardamom pods</li>
+      <li>Sugar to taste</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Boil water with ginger and cardamom.</li>
+      <li>Add tea leaves and let it simmer.</li>
+      <li>Pour in milk and sugar, boil for 2 mins.</li>
+      <li>Strain and serve hot.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0Cy-poItiRo?si=rBeX4W8jzNM8M0nm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Kesari -->
+<div class="card">
+  <img src="images/kesari.jpg" alt="Kesari">
+  <h3>Kesar Halwa (Kesari)</h3>
+  <p>Delicious South Indian sweet made with rava, ghee, and sugar.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe18',this)">View Recipe</button>
+  <div class="details" id="recipe18">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>1 cup rava (semolina)</li>
+      <li>2 cups water</li>
+      <li>3/4 cup sugar</li>
+      <li>3 tbsp ghee</li>
+      <li>Cashews & raisins</li>
+      <li>A pinch of saffron or food color</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Roast rava in ghee until aromatic.</li>
+      <li>Boil water with saffron, add sugar, stir well.</li>
+      <li>Add roasted rava slowly, mixing to avoid lumps.</li>
+      <li>Cook till thick, add cashews & raisins. Serve warm.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7uqxP4BByw0?si=ni-Ten-aw1tNlnuu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- White Sauce Pasta -->
+<div class="card">
+  <img src="images/pasta.jpg" alt="White Sauce Pasta">
+  <h3>White Sauce Pasta</h3>
+  <p>Rich and creamy pasta in a delicious white sauce with vegetables.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe19',this)">View Recipe</button>
+  <div class="details" id="recipe19">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>200g pasta</li>
+      <li>2 tbsp butter</li>
+      <li>2 tbsp all-purpose flour</li>
+      <li>1 ½ cups milk</li>
+      <li>1 cup vegetables (carrot, capsicum, beans)</li>
+      <li>Salt & pepper to taste</li>
+      <li>1/4 tsp nutmeg powder (optional)</li>
+      <li>Grated cheese for topping</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Cook pasta according to package instructions and keep aside.</li>
+      <li>Melt butter in a pan, add flour, and cook for 1-2 minutes.</li>
+      <li>Gradually add milk, stirring continuously to make a smooth sauce.</li>
+      <li>Add vegetables, salt, pepper, and nutmeg. Cook until veggies are tender.</li>
+      <li>Mix cooked pasta with the sauce. Top with grated cheese.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FVzRP7GFnJg?si=6tz0YBQ_tumNC7r9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Mango Juice -->
+<div class="card">
+  <img src="images/mango.jpg" alt="Mango Juice">
+  <h3>Mango Juice</h3>
+  <p>Refreshing and naturally sweet mango juice, perfect for summer.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe20',this)">View Recipe</button>
+  <div class="details" id="recipe20">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 ripe mangoes, peeled and chopped</li>
+      <li>2 cups cold water or milk</li>
+      <li>2-3 tsp sugar (optional)</li>
+      <li>Ice cubes (optional)</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Blend mango pieces with water/milk and sugar until smooth.</li>
+      <li>Strain if desired, add ice cubes, and serve chilled.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/AJ2Glkz9Liw?si=-BCOOdejbP6tvL22" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+<!-- Chilli Chicken -->
+<div class="card">
+  <img src="images/chilli chicken.jpg" alt="Chilli Chicken">
+  <h3>Chilli Chicken</h3>
+  <p>Spicy, tangy, and flavorful Indo-Chinese style chicken dish.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe21',this)">View Recipe</button>
+  <div class="details" id="recipe21">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>500g boneless chicken, cut into cubes</li>
+      <li>2 tbsp cornflour</li>
+      <li>2 tbsp all-purpose flour</li>
+      <li>1 egg</li>
+      <li>1 tbsp soy sauce</li>
+      <li>1 tbsp chili sauce</li>
+      <li>1 tbsp ginger-garlic paste</li>
+      <li>1 onion, chopped</li>
+      <li>1 capsicum, chopped</li>
+      <li>2-3 green chilies, slit</li>
+      <li>2-3 tbsp oil for frying</li>
+      <li>Salt to taste</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Marinate chicken with soy sauce, chili sauce, ginger-garlic paste, cornflour, flour, egg, and salt for 30 minutes.</li>
+      <li>Heat oil in a pan and deep-fry the chicken pieces until golden brown. Drain excess oil.</li>
+      <li>In another pan, sauté onions, capsicum, and green chilies for 2-3 minutes.</li>
+      <li>Add fried chicken, extra chili sauce, soy sauce, and salt. Toss everything together for 2-3 minutes.</li>
+      <li>Serve hot as a starter or with fried rice/noodles.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/f0flekd_x80?si=ju6rRyya9kHi-HyC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+ <!-- Cheesecake -->
+<div class="card">
+  <img src="images/cheese cake.jpg" alt="Cheesecake">
+  <h3>Cheesecake</h3>
+  <p>Rich, creamy, and smooth cheesecake with a buttery biscuit base.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe22',this)">View Recipe</button>
+  <div class="details" id="recipe22">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>200g digestive biscuits</li>
+      <li>100g butter, melted</li>
+      <li>300g cream cheese</li>
+      <li>200ml heavy cream</li>
+      <li>100g sugar</li>
+      <li>1 tsp vanilla extract</li>
+      <li>Optional: fruit topping or chocolate sauce</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Crush biscuits and mix with melted butter. Press into a greased pan to form the base.</li>
+      <li>Beat cream cheese, sugar, and vanilla until smooth.</li>
+      <li>Whip heavy cream separately until stiff peaks form and fold into cream cheese mixture.</li>
+      <li>Pour the mixture over the biscuit base and smooth the top.</li>
+      <li>Refrigerate for 4-6 hours or until set.</li>
+      <li>Top with fruits or chocolate sauce before serving.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Mfig-pIyh-g?si=4pRN0PZOh7y_gKRi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+  <!-- Butterscotch Ice Cream -->
+<div class="card">
+  <img src="images/ice.jpg" alt="Butterscotch Ice Cream">
+  <h3>Butterscotch Ice Cream</h3>
+  <p>Creamy, rich, and crunchy butterscotch flavored ice cream.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe23',this)">View Recipe</button>
+  <div class="details" id="recipe23">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 cups fresh cream</li>
+      <li>1 cup condensed milk</li>
+      <li>1/2 cup butterscotch nuts</li>
+      <li>1 tsp butterscotch essence</li>
+      <li>Caramel sauce (optional)</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Whip the fresh cream until soft peaks form.</li>
+      <li>Add condensed milk and butterscotch essence, mix well.</li>
+      <li>Fold in crunchy butterscotch nuts.</li>
+      <li>Pour into a container, freeze 6–8 hours.</li>
+      <li>Drizzle caramel sauce before serving.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bCzkmMbl9JM?si=-j3NLvFAFIB_PalO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Veg Salna -->
+<div class="card">
+  <img src="images/veg salna.jpg" alt="Veg Salna">
+  <h3>Veg Salna</h3>
+  <p>Flavorful South Indian vegetable curry served with parotta.</p>
+  <button class="view-btn" onclick="toggleDetails('recipe24',this)">View Recipe</button>
+  <div class="details" id="recipe24">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>1 cup mixed vegetables (carrot, beans, potato, peas)</li>
+      <li>2 onions (sliced)</li>
+      <li>2 tomatoes (chopped)</li>
+      <li>1/2 cup coconut paste</li>
+      <li>1 tsp garam masala</li>
+      <li>2 tsp chili powder</li>
+      <li>2 tbsp oil</li>
+      <li>Salt to taste</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Heat oil, sauté onions and tomatoes until soft.</li>
+      <li>Add chili powder, garam masala, salt, and stir well.</li>
+      <li>Add vegetables and cook for 5 minutes.</li>
+      <li>Add coconut paste and enough water, simmer 10 minutes.</li>
+      <li>Serve hot with parotta or chapati.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yRxWsi277Dc?si=jNy2jOVciyvhyekj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  </div>
+
+  <!-- Tomato Rice -->
+<div class="card">
+  <img src="images/tomato.jpg" alt="Tomato Rice">
+  <h3>Tomato Rice</h3>
+  <p>Flavorful South Indian rice cooked with tangy tomatoes and spices.</p>
+  <button class="view-btn" onclick="toggleDetails('recipeTomato')">View Recipe</button>
+  <div class="details" id="recipeTomato">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 cups cooked rice</li>
+      <li>3 medium tomatoes (chopped)</li>
+      <li>1 onion (sliced)</li>
+      <li>2 green chilies</li>
+      <li>1 tsp ginger garlic paste</li>
+      <li>1 tsp mustard seeds</li>
+      <li>1 tsp cumin seeds</li>
+      <li>1 tsp chili powder</li>
+      <li>1/2 tsp turmeric</li>
+      <li>1 tsp garam masala</li>
+      <li>Curry leaves</li>
+      <li>Salt as needed</li>
+      <li>Oil for cooking</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Heat oil in a pan, add mustard, cumin, curry leaves, and green chilies.</li>
+      <li>Add onions and sauté until golden. Add ginger garlic paste and fry.</li>
+      <li>Stir in tomatoes, chili powder, turmeric, and salt. Cook until soft.</li>
+      <li>Mix in cooked rice and garam masala. Toss well to coat evenly.</li>
+      <li>Serve hot with papad or raita.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/LR4sjxopwJI?si=Uz68sCbGC0JJB9-C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Puliyodarai -->
+<div class="card">
+  <img src="images/puli.jpg" alt="Puliyodarai">
+  <h3>Puliyodarai</h3>
+  <p>Tamarind-flavored rice, spiced and tempered the traditional South Indian way.</p>
+  <button class="view-btn" onclick="toggleDetails('recipePuliyodarai')">View Recipe</button>
+  <div class="details" id="recipePuliyodarai">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 cups cooked rice</li>
+      <li>1 lemon-sized tamarind ball</li>
+      <li>2 tbsp sesame oil</li>
+      <li>2 tbsp peanuts</li>
+      <li>1 tsp mustard seeds</li>
+      <li>1 tsp chana dal</li>
+      <li>1 tsp urad dal</li>
+      <li>2 dried red chilies</li>
+      <li>1/4 tsp asafoetida</li>
+      <li>Curry leaves</li>
+      <li>Salt to taste</li>
+      <li>Puliyodarai spice powder (optional, for extra flavor)</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Soak tamarind in warm water and extract thick juice.</li>
+      <li>Heat oil, fry peanuts until golden, remove and set aside.</li>
+      <li>In the same oil, temper mustard, dals, chilies, curry leaves, and asafoetida.</li>
+      <li>Add tamarind extract, salt, and cook until thick.</li>
+      <li>Mix the tamarind paste into cooked rice and add fried peanuts.</li>
+      <li>Rest for 30 minutes before serving for best flavor.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q0ZumcIOe2g?si=8HMQ7queHYyVZ4gH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Kalan -->
+<div class="card">
+  <img src="images/kalan.jpg" alt="Kalan">
+  <h3>Kalan (Mushroom Curry)</h3>
+  <p>A Kerala-style yogurt-based curry made with mushrooms and coconut.</p>
+  <button class="view-btn" onclick="toggleDetails('recipeKalan')">View Recipe</button>
+  <div class="details" id="recipeKalan">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>200g mushrooms (sliced)</li>
+      <li>1 cup yogurt (sour curd)</li>
+      <li>1/2 cup grated coconut</li>
+      <li>2 green chilies</li>
+      <li>1 tsp cumin seeds</li>
+      <li>1/2 tsp turmeric</li>
+      <li>Salt as needed</li>
+      <li>2 tsp coconut oil</li>
+      <li>1 tsp mustard seeds</li>
+      <li>Curry leaves</li>
+      <li>2 dried red chilies</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Cook mushrooms with turmeric, salt, and little water until soft.</li>
+      <li>Grind coconut, cumin, and green chilies into a fine paste.</li>
+      <li>Add paste and yogurt to the mushrooms. Simmer gently (do not boil after yogurt is added).</li>
+      <li>Prepare tempering with coconut oil, mustard, red chilies, and curry leaves.</li>
+      <li>Pour over curry and serve with rice.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GOHIti5sMK0?si=e2KVxCkIwcg6fLEO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Strawberry Pudding -->
+<div class="card">
+  <img src="images/pudding.jpg" alt="Strawberry Pudding">
+  <h3>Strawberry Pudding</h3>
+  <p>Light, creamy, and fruity strawberry pudding topped with fresh strawberries.</p>
+  <button class="view-btn" onclick="toggleDetails('recipeStrawberry')">View Recipe</button>
+  <div class="details" id="recipeStrawberry">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 cups milk</li>
+      <li>1/2 cup sugar</li>
+      <li>2 tbsp cornflour</li>
+      <li>1/2 cup strawberry puree</li>
+      <li>1 tsp vanilla essence</li>
+      <li>1/2 cup fresh cream</li>
+      <li>Chopped strawberries (for garnish)</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Mix cornflour in 1/4 cup milk and keep aside.</li>
+      <li>Boil remaining milk with sugar, then stir in cornflour mixture.</li>
+      <li>Cook until thick, add vanilla and strawberry puree.</li>
+      <li>Cool slightly, fold in whipped cream.</li>
+      <li>Pour into bowls, refrigerate for 2-3 hours.</li>
+      <li>Garnish with fresh strawberries before serving.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gkLe58v3-QQ?si=5czf87xRcQpu5SA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Red Velvet Cake -->
+<div class="card">
+  <img src="images/red cake.jpg" alt="Red Velvet Cake">
+  <h3>Red Velvet Cake</h3>
+  <p>Moist, fluffy, and vibrant red cake layered with smooth cream cheese frosting.</p>
+  <button class="view-btn" onclick="toggleDetails('recipeRedVelvet')">View Recipe</button>
+  <div class="details" id="recipeRedVelvet">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 1/2 cups all-purpose flour</li>
+      <li>1 1/2 cups sugar</li>
+      <li>1 cup buttermilk</li>
+      <li>1/2 cup butter (softened)</li>
+      <li>2 eggs</li>
+      <li>2 tbsp cocoa powder</li>
+      <li>1 tsp baking soda</li>
+      <li>1 tsp vinegar</li>
+      <li>1 tsp vanilla extract</li>
+      <li>2 tbsp red food coloring</li>
+      <li>Cream cheese frosting (for layering and topping)</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Preheat oven to 180°C (350°F). Grease and line cake tins.</li>
+      <li>Beat butter and sugar until creamy, then add eggs one at a time.</li>
+      <li>Mix cocoa, food color, and vanilla, add to batter.</li>
+      <li>Add flour and buttermilk alternately, mixing gently.</li>
+      <li>Combine baking soda with vinegar, fold into the batter.</li>
+      <li>Bake 30–35 mins, cool completely.</li>
+      <li>Layer with cream cheese frosting and decorate.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/KvlAjbfv20M?si=w-o0LE7noiWUdU-S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+
+<!-- Momos -->
+<div class="card">
+  <img src="images/momos.jpg" alt="Momos">
+  <h3>Momos</h3>
+  <p>Steamed dumplings stuffed with flavorful vegetables or chicken, served with spicy chutney.</p>
+  <button class="view-btn" onclick="toggleDetails('recipeMomos')">View Recipe</button>
+  <div class="details" id="recipeMomos">
+    <h4>Ingredients:</h4>
+    <ul>
+      <li>2 cups all-purpose flour</li>
+      <li>1 cup finely chopped cabbage</li>
+      <li>1/2 cup grated carrot</li>
+      <li>1/2 cup chopped onion</li>
+      <li>2 garlic cloves (minced)</li>
+      <li>1 tsp ginger (grated)</li>
+      <li>1 tsp soy sauce</li>
+      <li>Salt & pepper to taste</li>
+      <li>1 tbsp oil</li>
+      <li>(Optional) 1 cup minced chicken for chicken momos</li>
+    </ul>
+    <h4>Procedure:</h4>
+    <ol>
+      <li>Knead flour with water and a pinch of salt to make a smooth dough. Rest 30 mins.</li>
+      <li>Heat oil, sauté garlic, ginger, onion, and veggies. Add soy sauce, salt, and pepper. Cook lightly.</li>
+      <li>Roll dough into small discs, place stuffing in the center, fold and pleat into dumplings.</li>
+      <li>Steam momos in a steamer for 10–12 minutes until soft and cooked.</li>
+      <li>Serve hot with spicy tomato chutney.</li>
+    </ol>
+    <h4>Watch Video:</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IVM_CQvgxCg?si=M2Y14XsgvH4qqBXf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">📧 Email: mycookbook@example.com</p>
+    <p style="text-align:center;">📞 Phone: +91 98765 43210</p>
+  </section>
+
+</body>
+</html>
+
+  
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Your Phone">
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
